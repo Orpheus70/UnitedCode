@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <windows.h>
 
-// Макрос для импорта функций из DLL
+// Макрос для импорта функции из DLL
 #ifdef _WIN32
 #define IMPORT __declspec(dllimport)
 #else
 #define IMPORT
 #endif
 
-typedef void (*ResultCallback)(int status, char* d);
+typedef void (*ResultCallback)(int status, const char* d);
 
-extern "C" {
-    IMPORT int send_command(char *d, ResultCallback callback_result);
+// Временная реализация send_command для теста
+int send_command(const char* d, ResultCallback callback_result) {
+    callback_result(0, d);
+    return 0;
 }
 
 // Реализация callback-функции
-void callback_result(int status, char *d) {
+void callback_result(int status, const char* d) {
     printf("%d %s\n", status, d);
 }
 
