@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Prerequisites
 *.d
 
@@ -30,3 +31,8 @@
 *.exe
 *.out
 *.app
+=======
+*.obj
+*.dll
+*.exe
+>>>>>>> d115dbd (111)
