@@ -6,6 +6,7 @@
             "command": "C:\\msys64\\usr\\bin\\make.exe",
             "args": [
             ],
+
             "options": {
                 "cwd": "${fileDirname}"
             },

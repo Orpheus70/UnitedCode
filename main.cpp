@@ -1,2 +1,9 @@
+#include "examplePulseReader.cpp"
 #include "LMexample.cpp"
-int main() { LMexample(); }
+
+int main() 
+{
+    examplePulseReader();
+    LMexample();
+    return 0;
+}
