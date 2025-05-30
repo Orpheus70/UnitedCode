@@ -8,10 +8,10 @@
 #define IMPORT
 #endif
 
-typedef void (*ResultCallback)(int status, const char* d);
+typedef void (*ResultCallbackPort)(int status, const char* d);
 
 // Временная реализация send_command для теста
-int send_command(const char* d, ResultCallback callback_result) {
+int send_command(const char* d, ResultCallbackPort callback_result) {
     callback_result(0, d);
     return 0;
 }

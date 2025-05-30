@@ -13,12 +13,12 @@
 #define EXPORT
 #endif
 
-typedef void (*ResultCallback)(int status, char* d);
+typedef void (*ResultCallbackPort)(int status, char* d);
 
 extern "C" {
 
 // Отправка команды устройству
-EXPORT int send_command(char *d, ResultCallback callback_result) {
+EXPORT int send_command(char *d, ResultCallbackPort callback_result) {
 
     // Пример вызова callback с фиксированными данными
     callback_result(0, (char*)"123");
