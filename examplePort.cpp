@@ -21,7 +21,5 @@ void callback_result(int status, const char* d) {
     printf("%d %s\n", status, d);
 }
 
-int main() {
-    send_command("123", callback_result);
-    return 0;
-}
+
+
