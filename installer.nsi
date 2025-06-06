@@ -25,6 +25,7 @@ Section "Установка файлов"
   ; txt-файлы
   File Pulse,SpO2.txt
   File input.txt
+  File Read.txt
 
   ; Примеры на C++
   File "examplePulseReader.cpp"
