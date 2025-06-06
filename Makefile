@@ -34,7 +34,7 @@ $(DLL_NAME4): $(DLL_SOURCES4)
 	$(CC) $(CFLAGS) -shared -o $@ $^
 
 # Правило для сборки EXE
-$(EXE_NAME): $(EXE_SOURCES)
+$(EXE_NAME): $(DLL_NAME1) $(DLL_NAME2) $(DLL_NAME3) $(DLL_NAME4) $(EXE_SOURCES)
 	$(CC) $(CFLAGS) -L. -l PulseReader -l Level -l tomom -l port -o $@ $^
 
 # Правило для очистки

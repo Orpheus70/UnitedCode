@@ -14,9 +14,9 @@ extern "C" {
 // Реализация callback-функции
 void resultReceiver(int status, float* pulse, float* spo2) {
     if (status != 0 || !pulse || !spo2) {
-        std::cout << "Данные не считаны. Повторите измерение ещё раз." << std::endl;
+        std::cout << "The data has not been read. Repeat the measurement again." << std::endl;
     } else {
-        std::cout << "Пульс: " << *pulse << " уд./мин." << std::endl;
+        std::cout << "Pulse: " << *pulse << " bpm" << std::endl;
         std::cout << "SpO2: " << *spo2 << " %" << std::endl;
     }
 }
