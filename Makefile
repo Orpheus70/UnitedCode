@@ -18,7 +18,7 @@ DLL_SOURCES4 = port.cpp
 EXE_SOURCES = main.cpp
 
 # Правило по умолчанию
-all: $(DLL_NAME1) $(DLL_NAME2) $(DLL_NAME3) $(DLL_NAME4) $(EXE_NAME) 
+all: $(DLL_NAME1) $(DLL_NAME2) $(DLL_NAME3) $(DLL_NAME4) $(EXE_NAME) Installer
 
 # Правило для сборки DLL
 $(DLL_NAME1): $(DLL_SOURCES1)
@@ -36,6 +36,9 @@ $(DLL_NAME4): $(DLL_SOURCES4)
 # Правило для сборки EXE
 $(EXE_NAME): $(DLL_NAME1) $(DLL_NAME2) $(DLL_NAME3) $(DLL_NAME4) $(EXE_SOURCES)
 	$(CC) $(CFLAGS) -L. -l PulseReader -l Level -l tomom -l port -o $@ $^
+
+Installer: $(DLL_NAME1) $(DLL_NAME2) $(DLL_NAME3) $(DLL_NAME4) $(EXE_NAME)
+	makensis installer.nsi 
 
 # Правило для очистки
 clean:

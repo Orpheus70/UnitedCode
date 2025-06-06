@@ -23,11 +23,15 @@ Section "Установка файлов"
   File "main.exe"
 
   ; txt-файлы
-  File Pulse,SpO2.txt
-  File input.txt
-  File Read.txt
+  File "Pulse,SpO2.txt"
+  File "input.txt"
+  File "Read.txt"
+
+  ; Makefile
+  File "redist\Makefile"
 
   ; Примеры на C++
+  File "main.cpp"
   File "examplePulseReader.cpp"
   File "LMexample.cpp"
   File "examplePort.cpp"
